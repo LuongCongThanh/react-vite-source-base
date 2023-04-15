@@ -1,0 +1,15 @@
+.vscode
+node_modules
+.module-cache
+*.log*
+build
+dist
+
+# WebStorm
+.idea/*
+
+# nodenv
+.node-version
+
+# Env
+.env.*
