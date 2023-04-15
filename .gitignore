@@ -4,6 +4,7 @@ node_modules
 *.log*
 build
 dist
+package-lock.json
 
 # WebStorm
 .idea/*
