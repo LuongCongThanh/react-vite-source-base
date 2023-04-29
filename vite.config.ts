@@ -15,7 +15,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        implementation: sass, // Sử dụng sass làm preprocessor cho SCSS
+        implementation: sass,
       },
       postcss: {
         plugins: [postcss],
@@ -25,7 +25,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '@pages': path.resolve(__dirname, 'src/app/pages'),
+      '@core': path.resolve(__dirname, 'src/app/core'),
+      '@feature': path.resolve(__dirname, 'src/app/features'),
       '@shared': path.resolve(__dirname, 'src/app/shared'),
       '@stylesheet': path.resolve(__dirname, 'src/stylesheet'),
       '@assets': path.resolve(__dirname, 'src/assets'),

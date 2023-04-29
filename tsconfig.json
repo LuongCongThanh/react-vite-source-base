@@ -4,7 +4,6 @@
     "module": "ESNext",
     "useDefineForClassFields": true,
     "moduleResolution": "Node",
-    "jsx": "react",
     "esModuleInterop": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -15,6 +14,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["app/core/*"],
+      "@feature/*": ["app/feature/*"],
+      "@shared/*":["app/shared/*"],
+      "@stylesheet/*": ["stylesheet/*"],
+      "@assets/*":["assets/*"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
