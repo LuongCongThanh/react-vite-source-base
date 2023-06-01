@@ -1,29 +1,15 @@
+// MainLayout.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { RouterOutlet } from '../../App';
-interface RouteConfig {
-  path: string;
-  component: React.ComponentType<any>;
-  exact?: boolean;
-  routes?: RouteConfig[];
-}
-interface MainLayoutProps {
-  routes: RouteConfig[];
-}
+import { Outlet } from 'react-router-dom';
 
-const MainLayout = ({ routes }: MainLayoutProps) => {
+const MainLayout = () => {
   return (
     <div>
+      <h1>Main Layout</h1>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
+        {/* Đặt các liên kết đến các trang con tại đây */}
       </nav>
-      <div>
-        <RouterOutlet routes={routes} />
-      </div>
+      <Outlet />
     </div>
   );
 };
