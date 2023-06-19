@@ -6,9 +6,7 @@ const MainLayout = () => {
   return (
     <div>
       <h1>Main Layout</h1>
-      <nav>
-        {/* Đặt các liên kết đến các trang con tại đây */}
-      </nav>
+      <nav>{/* Đặt các liên kết đến các trang con tại đây */}</nav>
       <Outlet />
     </div>
   );

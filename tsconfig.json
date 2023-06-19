@@ -15,8 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
+      "~/*": ["src/*"],
       "@core/*": ["app/core/*"],
       "@feature/*": ["app/feature/*"],
       "@shared/*":["app/shared/*"],
@@ -24,6 +25,7 @@
       "@assets/*":["assets/*"],
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["vite.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "types": ["vite-plugin-svgr"]
 }

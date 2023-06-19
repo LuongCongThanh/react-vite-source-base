@@ -3,25 +3,24 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 import sass from 'sass';
 import path from 'path';
 import postcss from 'postcss';
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   server: {
     host: 'localhost',
     port: 3000,
   },
-  plugins: [
-    reactRefresh(), // Plugin hỗ trợ HMR cho React
-  ],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        implementation: sass,
-      },
-      postcss: {
-        plugins: [postcss],
-      },
-    },
-  },
+  plugins: [svgr(),reactRefresh()],
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       implementation: sass,
+  //     },
+  //     postcss: {
+  //       plugins: [postcss],
+  //     },
+  //   },
+  // },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
