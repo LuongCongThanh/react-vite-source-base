@@ -17,7 +17,6 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
       "@core/*": ["app/core/*"],
       "@feature/*": ["app/feature/*"],
       "@shared/*":["app/shared/*"],
@@ -25,7 +24,6 @@
       "@assets/*":["assets/*"],
     }
   },
-  "include": ["vite.config.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "types": ["vite-plugin-svgr"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "dist"]
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import PrimaryLayout from '@core/layout/PrimaryLayout';
-import MainLayout from '@core/layout/MainLayout';
 import Login from './features/auth/Login';
 import Register from './features/auth/Register';
 import Home from './features/HomePage/Home';
+import MainLayout from './core/layout/MainLayout';
+import PrimaryLayout from './core/layout/PrimaryLayout';
 
 const App = () => {
   return (
