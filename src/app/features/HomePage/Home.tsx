@@ -1,13 +1,7 @@
-import React from 'react';
-
-import { Button } from '@mui/material';
-
 const Home = () => {
   return (
     <div>
-      <Button variant="contained" color="primary">
-        Hello Material-UI
-      </Button>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 };

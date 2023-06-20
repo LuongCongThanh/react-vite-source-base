@@ -1,9 +1,9 @@
 const RESOURCES = {
-  auth: 'auth',
+  auth: 'auth'
 };
 
 export const ENDPOINT = {
   auth: {
-    login: `${RESOURCES.auth}/login`,
-  },
+    login: `${RESOURCES.auth}/login`
+  }
 };

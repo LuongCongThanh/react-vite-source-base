@@ -15,15 +15,15 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@core/*": ["app/core/*"],
-      "@feature/*": ["app/feature/*"],
-      "@shared/*":["app/shared/*"],
-      "@stylesheet/*": ["stylesheet/*"],
-      "@assets/*":["assets/*"],
+      "@core/*": ["src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@stylesheet/*": ["src/stylesheet/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "dist"]
 }
