@@ -17,11 +17,11 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@core/*": ["app/core/*"],
-      "@feature/*": ["app/feature/*"],
-      "@shared/*":["app/shared/*"],
-      "@stylesheet/*": ["stylesheet/*"],
-      "@assets/*":["assets/*"],
+      "@core/*": ["src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@stylesheet/*": ["src/stylesheet/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "include": ["src/**/*"],
