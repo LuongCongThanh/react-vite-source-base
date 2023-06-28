@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   server: {
     host: 'localhost',
     port: 3000
   },
-  plugins: [reactRefresh()],
+  plugins: [react()],
   resolve: {
     alias: {
       '@core': '/src/app/core',
