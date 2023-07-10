@@ -38,6 +38,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
@@ -47,5 +48,17 @@
     "vite": "^4.3.9",
     "vitest": "^0.32.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "npm run format:check",
+      "git add"
+    ]
+  }
 }
