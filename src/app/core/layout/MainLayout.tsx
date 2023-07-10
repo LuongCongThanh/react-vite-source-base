@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import Home from '@features/HomePage/Home';
 
 const MainLayout = () => {
   return (
