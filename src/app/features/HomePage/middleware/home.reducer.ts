@@ -1,5 +1,3 @@
-// reducer.ts
-
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 import { decreaseValueHome, increaseValueHome } from '@features/HomePage/middleware/home.action';
 

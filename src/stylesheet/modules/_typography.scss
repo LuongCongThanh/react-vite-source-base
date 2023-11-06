@@ -1,0 +1,19 @@
+.txt-h1 {
+  @include typography(20px, 20px, 800);
+  @include resTypAbove(large, 30px, 30px, 800);
+}
+.txt-h2 {
+  @include typography(14px, 14px, 600);
+}
+.txt-display1 {
+  @include typography(14px, 16px, 600);
+  @include resTypAbove(large, 16px, 18px, 600);
+}
+.txt-display2 {
+  @include typography(9px, 9px, 600);
+  @include resTypAbove(large, 11px, 11px, 600);
+}
+.txt-display3 {
+  @include typography(14px, 14px, 300);
+}
+
