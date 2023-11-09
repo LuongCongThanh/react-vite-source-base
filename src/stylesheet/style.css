@@ -212,6 +212,28 @@ button:disabled {
   }
 }
 
+.header {
+  min-height: 70px;
+  min-height: 4.375;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header-content-item {
+  padding: 16px;
+  padding: 1;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -221,6 +243,11 @@ button:disabled {
   .container {
     max-width: 800px;
   }
+}
+
+.main-layout-content {
+  padding-top: 70px;
+  padding-top: 4.375;
 }
 
 .pd-0 {

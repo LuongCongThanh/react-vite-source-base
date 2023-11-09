@@ -1,0 +1,10 @@
+{
+  "HEADER": {
+    "MENU": {
+      "HOME": "Home",
+      "TV_SHOW": "TV Show",
+      "MOVIE": "Movie",
+      "MY_LIST": "My List"
+    }
+  }
+}

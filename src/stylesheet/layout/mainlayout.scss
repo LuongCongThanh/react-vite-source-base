@@ -1,0 +1,5 @@
+.main-layout {
+  &-content {
+    @include pxRem(padding-top, 70);
+  }
+}

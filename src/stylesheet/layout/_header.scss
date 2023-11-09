@@ -1,0 +1,19 @@
+.header {
+  @include pxRem(min-height, 70);
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: map-get($color, black);
+  color: map-get($color, white);
+
+  &-content {
+    @include flex(center, center);
+    height: 100%;
+
+    &-item {
+      @include pxRem(padding, 16);
+    }
+  }
+}

@@ -48,11 +48,13 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
 @mixin box-shadow($shadow) {
   box-shadow: $shadow;
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
 }
+
 @mixin transition($transition) {
   -webkit-transition: $transition;
   -moz-transition: $transition;
@@ -60,26 +62,31 @@
   -o-transition: $transition;
   transition: $transition;
 }
+
 @mixin transform($value) {
   -ms-transform: $value;
   -webkit-transform: $value;
   transform: $value;
 }
+
 @mixin transformX($transition) {
   -ms-transform: translateX($transition);
   -webkit-transform: translateX($transition);
   transform: translateX($transition);
 }
+
 @mixin transformY($transition) {
   -ms-transform: translateY($transition);
   -webkit-transform: translateY($transition);
   transform: translateY($transition);
 }
+
 @mixin opacity($opacity) {
   -webkit-opacity: $opacity;
   -moz-opacity: $opacity;
   opacity: $opacity;
 }
+
 @mixin clearfix() {
   &::after {
     display: block;
@@ -87,19 +94,23 @@
     clear: both;
   }
 }
+
 @mixin font-icon($icon) {
   content: map-get($font-icon, $icon);
   font-family: map-get($font-family, icon);
   -webkit-font-smoothing: antialiased;
 }
+
 @mixin border-box($border-box) {
   -webkit-box-sizing: $border-box;
   -moz-box-sizing: $border-box;
   box-sizing: $border-box;
 }
+
 @mixin text-fill-color($prColor) {
   -webkit-text-fill-color: map-get($color, $prColor) !important;
 }
+
 @mixin flex-direction($direction) {
   -webkit-flex-direction: $direction;
   -moz-flex-direction: $direction;
@@ -114,11 +125,12 @@
   display: -webkit-flex;
   display: flex;
 }
+
 @mixin flex-wrap($wrap) {
   -webkit-flex-wrap: $wrap;
-     -moz-flex-wrap: $wrap;
-      -ms-flex-wrap: $wrap;
-          flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
 }
 
 @mixin ellipsis-special($number : null) {
@@ -126,8 +138,7 @@
   @if type-of($number) != number {
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-  @else {
+  } @else {
     display: box;
     display: -moz-box;
     display: -webkit-box;
@@ -147,25 +158,24 @@
 
 // === CONVERT PXREM ===
 @function strip-units($number) {
-  @return $number / ($number * 0 + 1);
+  @return calc($number / ($number * 0 + 1))
 }
 
 @function convertRootPxToEm($value) {
   // check for null:
-  @if($value == null) {
+  @if ($value == null) {
     @return $value;
   }
   // assume em:
   @if (unitless($value) or unit($value) == em) {
     @return 0em + $value;
-  }
-  @else {
+  } @else {
     @return 0em + strip-units($value) / 16;
   }
 }
 
 @function convertPxToRem($px) {
-  @return 0rem + strip-units($px) / 16;
+  @return calc(strip-units($px) / 16);
 }
 
 @mixin pxRem($property, $values) {
@@ -181,13 +191,12 @@
   // Loop through the $values list:
   @each $value in $values {
     @if type-of($value) == number and (unitless($value) or unit($value) == px) {
-    $px-values: join($px-values, 0px + ($value));
+      $px-values: join($px-values, 0px + ($value));
       $rem-values: join($rem-values, convertPxToRem($value));
-    }
-    @else {
-    // no conversion:
-    $px-values: join($px-values, $value);
-    $rem-values: join($rem-values, $value);
+    } @else {
+      // no conversion:
+      $px-values: join($px-values, $value);
+      $rem-values: join($rem-values, $value);
     }
   }
 
@@ -196,10 +205,11 @@
   // don't add media query if it's not needed:
   @if $px-values != $rem-values {
     // @media only all {
-      #{$property}: $rem-values;
+    #{$property}: $rem-values;
     // }
   }
 }
+
 // == End / Convert Px To Rem
 
 @mixin flex($just-content, $align-item) {
