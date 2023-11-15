@@ -25,8 +25,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  height: 26px;
+  min-width: 32px;
+  height: 32px;
   padding: 0 6px;
   border-radius: 5px;
   background-color: transparent;
@@ -51,8 +51,8 @@ button {
   }
 
   &-default {
-    @include btn-color(text);
-    border-color: map-get($color, border);
+    @include btn-color(white);
+    border-color: map-get($color, white);
   }
 
   // Responsive 1024

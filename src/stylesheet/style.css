@@ -78,7 +78,7 @@ html, body {
   padding: 0;
   font-size: 16px;
   line-height: 1;
-  font-family: "Hiragino Sans", san-serif;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   font-weight: 400;
   color: #000000;
   background-color: #FFFFFF;
@@ -88,7 +88,7 @@ html, body {
 }
 @media (max-width: 559px) {
   html, body {
-    font-size: 3.55556vw;
+    font-size: 14px;
   }
 }
 
@@ -182,13 +182,13 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  height: 26px;
+  min-width: 32px;
+  height: 32px;
   padding: 0 6px;
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid transparent;
-  font-family: "Hiragino Sans", san-serif;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -197,9 +197,9 @@ button:disabled {
 }
 .btn-default {
   background-color: transparent;
-  color: #000000;
-  border-color: #000000;
-  border-color: #999999;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 .btn-default:hover {
   opacity: 0.75;

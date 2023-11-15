@@ -25,7 +25,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
 
   @include respond-below(small) {
-    font-size: 3.55556vw;
+    font-size: 14px;
   }
 }
 
